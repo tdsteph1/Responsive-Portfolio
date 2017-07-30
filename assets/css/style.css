@@ -1,0 +1,1340 @@
+body
+{
+	overflow: hidden;
+	background-color: #ffffff;							/* white */
+	font-style: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+				
+														
+	
+
+}
+
+h1, h2, h3
+{
+	font-style: 'Georgia', Times, "Times New Roman", serif;
+}
+
+p
+{
+	color: #777777;
+	font-size: 18px;
+}
+
+.header
+{
+	width: 960px;
+	
+	overflow: hidden;									/* Allows (name) box to remain inside the border when we do .name{float: left} otherwise we get error where box is outside of container
+															   This prevents Parent(header) overiding child (name) and gets rid of (Calapsing Margin Error) */
+	background-color: #ffffff;
+	color: black;
+	padding-top: 0px;									/* OR padding: 1px 1px 1px 1px; Note: NEVER USE COMMA(,)s to seperate!!!!!!! */	
+	padding-bottom: 0px;
+	padding-left: 1px;
+	padding-right: 1px;
+	
+														/* Try: margin: 1px; This will slightly reduce the size of the container box due to adding spacing all around the container. */
+    margin-left: 480px;
+
+	
+	
+	  													
+	  													/*  									Calapsing Margin
+
+	  																The Parent container <body> box is colliding or making contact with the child <div id="header"> child container.
+	  																As a result Parent(body) overides child container(#header) causing body to add space below moving <div id="header">
+	  																downward instead of <div id="header" moving up with bottom spacing between (#header) and elements below.
+
+	  																To fix this try adding overflow: auto; in #header.
+							 																								or
+
+																    Add top padding to the parent container(body) or add top padding to child container <div id="header"> EX: padding-top: 1px;
+
+														*/
+
+	position: relative;
+	bottom: 20px;
+	
+	border-bottom-style: solid;							/* (#headers)'s bottom border */
+	 border-width: 2px; 
+	 border-color: #cccccc;								/* dark grey */
+   
+   
+  
+   
+	
+ }
+
+.name
+{
+	padding-top: 1px;
+	
+	padding: 40px;							/* Same As padding-top:40px padding-bottom: 40px padding-left:40px; padding-right: 40px;							
+											   NOTE: padding-top; 1px or overflow: auto will prevent (Clapsing Margin) where parent box(.header) overides child box (.name); */
+	padding-right: 10px;
+	background-color: #4aaaa5;
+	color: #ffffff;
+	margin-bottom: 0px;						/* NOTE: margin-bottom: 1%; puts a space between name(TJ Stephens) & (#header) box which increases the size of #header's padding-bottom */
+	margin-left: 10px;
+	width: 200px;
+
+	position: relative;						/* So we don't increase (.header's) bottom padding, we only move (.name) up by 5px. */
+	bottom: 0.5px;
+    float: left;							/* So (name) and (A_P_C) can be adjacent to each other. Note: parent <div> must have overlow: auto; in order for this to work */
+   
+
+	
+}
+
+
+    
+.A_P_C 
+{
+	float: left;
+	display: inline;
+	font-size: 18px;
+	margin: 10px;
+
+	position: relative;
+	left: 200px;
+	top: 60px;
+    
+    
+   
+		
+ 
+}
+
+.main-content-container
+{
+	overflow: hidden;
+	background-color: #eff0f2;
+	width: 960px;
+	padding-right: 2px;
+	padding-bottom: 103px;				 /* NOTE: Before adding to the bottom take note that if there is margin space between (Main-content-container) & (footer), you'll be pushing against the spacing.
+											 so remove the margin ; */
+    height: 644px; 					
+	margin-left: 480px;
+
+  
+	
+	position: relative;
+	bottom: 20px;
+    
+   
+    
+
+    
+    border-top-style: solid;			/* (#headers)'s bottom border */
+	 border-width: 1px; 
+	 border-color: #cccccc;	
+
+
+}
+
+.main-content
+{
+
+	overflow: hidden;
+	background-color: #ffffff;
+	font-size: 18px;
+	width: 650px;
+	height: 685px;
+	margin-left: 10px;					/* moves white main-content box to the right due to spacing on the left */
+	margin-top: 30px;					/* moves white main-conent down due to spacing above */
+	padding-bottom: 0px;
+  	border-style: solid;							
+	border-width: 1px; 
+	border-color: #cccccc;	
+
+	
+
+	
+
+	 
+}
+
+.main-content p
+{
+	margin-left: 10px;					 /* allows horizontal spacing between (main-content) container and text. Similar to margin-right: 5x in (.bio-image) */
+}
+
+.About-Me
+{
+    
+    overflow: hidden;
+	color: #4aaaa5;
+	margin-left: 10px;
+										/*(border-bottom: 2px solid #eff0f2;) Use in Psuedo since we're customizing the width*/
+
+}
+
+.About-Me:after							/* Psuedo Element: work around for changing the border width for (connect) container  */
+{
+	content: "";
+	display: block;
+	padding-top: 0px;
+	border-bottom: 3px solid #eff0f2;
+	width: 95%;
+
+
+	
+}
+
+.bio-image
+{
+	
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;						/* Allows the image to move the adjacent text to the right allowing space between image and text.
+											/*vertical-align: top;*/
+}
+
+.connect
+{
+	overflow: hidden;
+	width: 270px;
+	background-color: #ffffff;
+	color: #4aaaa5;
+	text-align: center;
+	margin-left: 680px;
+	padding-bottom: 60px;
+	position: relative;
+	bottom: 687px;
+
+
+  
+						
+	
+	border-style: solid;							
+	border-width: 1px; 
+	border-color: #cccccc;	
+	
+	 
+}
+
+.connect:after								/* Psuedo Element: work around for changing the border width for (connect) container  */
+{
+	
+	content: "";
+	display: block;
+	padding-top: 0px;
+	border-bottom: 2px solid #eff0f2;
+	width: 70%;
+
+	position: relative;
+	bottom: 10px;
+	left: 42px;
+
+
+	
+}
+
+
+
+
+.git_image
+{
+	float: left;
+	margin: 10px;
+							
+	
+}
+
+.link_image
+{
+	float: left;
+	margin: 10px;
+							
+	
+}
+
+.stack_image
+{
+	float: left;
+	margin: 10px;
+								
+	
+}
+
+
+.footer
+{
+	overflow: hidden;
+	text-align: center;
+	font-size: 5px;
+	background-color: #666666;
+	width: 960px;
+	height: 100px;			
+	margin-left: 480px;
+	margin-top: 0px;
+	padding-right: 2px;
+
+	border-top: 6px solid #4aaaa5; 
+
+	position: relative;
+	bottom: 28px;
+
+	
+
+	
+
+	
+
+ }
+
+ .footer p
+ {
+ 	font-size: 12px;
+ 	color: white;
+ 	position: relative;
+ 	top: 38px;
+
+
+ }
+
+
+/*  Contact */
+.main-content_2
+{
+
+	overflow: hidden;
+	background-color: #ffffff;
+	font-size: 18px;
+	width: 650px;
+	height: 685px;
+	margin-left: 10px;					/* moves white main-content box to the right due to spacing on the left */
+	margin-top: 30px;					/* moves white main-conent down due to spacing above */
+	padding-bottom: 0px;
+	
+    
+
+  	border-style: solid;							
+	border-width: 1px; 
+	border-color: #cccccc;	
+
+
+
+	 
+}
+
+.contact-info
+{
+    
+    overflow: hidden;
+	color: #4aaaa5;
+	margin-left: 10px;
+	
+
+
+}
+
+.contact-info:after							/* Psuedo Element: work around for changing the border width for (connect) container  */
+{
+	content: "";
+	display: block;
+	padding-top: 0px;
+	border-bottom: 3px solid #eff0f2;
+	width: 95%;
+
+}
+
+form
+{
+	margin-left: 28px;
+}
+
+input
+{
+	height: 30px;
+	border: 2px solid  #eff0f2;
+}
+
+textarea
+{
+	width: 590px;
+	height: 202px;
+}
+
+.button
+{
+	width: 140px;
+	height: 45px;
+	background-color: #4aaaa5;
+	
+	font-size: 22px;
+	text-align: center;
+
+
+}
+
+.button p
+{
+	color: #ffffff;					    /* (.button p) overides the p selector color preference from the tom */
+	position: relative;
+	top: 10px;
+}
+
+
+::-webkit-input-placeholder  			/* Chrome/Opera/Safari: affects the color of the placeholder for each text field */
+{
+  color: #e5e7ea;
+}
+
+
+/* Porfolio Page */
+.main-content_3
+{
+
+	overflow: hidden;
+	background-color: #ffffff;
+	font-size: 18px;
+	width: 650px;
+	height: 685px;
+	margin-left: 10px;					/* moves white main-content box to the right due to spacing on the left */
+	margin-top: 30px;					/* moves white main-conent down due to spacing above */
+	padding-bottom: 0px;
+	
+    
+
+  	border-style: solid;							
+	border-width: 1px; 
+	border-color: #cccccc;	
+
+	
+
+	 
+}
+
+.portfolio-info
+{
+    
+    overflow: hidden;
+	color: #4aaaa5;
+	margin-left: 8px;
+
+}
+
+.portfolio-info:after					/* Psuedo Element: work around for changing the border width for (connect) container  */
+{
+	content: "";
+	display: block;
+	padding-top: 0px;
+	border-bottom: 3px solid #eff0f2;
+	width: 95%;
+
+}
+
+.image1
+{
+	
+	margin-left: 7px;
+	width: 250px;
+	height: 170px;
+	position: relative;
+	bottom: 10px;
+
+	
+	
+
+} 
+
+.image-footer1
+{
+	background-color: #4aaaa5;
+	width: 250px;
+	margin-left: 7px;
+	padding-top: 10px;
+	position: relative;
+	bottom: 63px;
+	text-align: center;
+
+}
+
+.footer_p
+{
+	color: white;
+
+	position: relative;
+	bottom: 10px;
+}
+
+.image2
+{
+	margin-left: 368px;
+	width: 250px;
+	height: 170px;
+
+	position: relative;
+	bottom: 252px;
+}
+
+.image-footer2
+{
+	background-color: #4aaaa5;
+	color: #ffffff;
+	width: 250px;
+	margin-left: 38px;
+	padding-top: 10px;
+	position: relative;
+	bottom: 305px;
+	left: 330px;							/* NOTE: We can either use right or left not both at the same time */
+	text-align: center;
+
+}
+
+.image3
+{
+	margin-left: 7px;
+	width: 250px;
+	height: 170px;
+
+	position: relative;
+	bottom: 306px;
+}
+
+.image-footer3
+{
+	background-color: #4aaaa5;
+	color: #ffffff;
+	width: 250px;
+	margin-left: 7px;
+	padding-top: 10px;
+	position: relative;
+	bottom: 360px;
+	text-align: center;
+
+}
+
+.image4
+{
+	margin-left: 368px;
+	width: 250px;
+	height: 170px;
+
+	position: relative;
+	bottom: 548px;
+}
+
+.image-footer4
+{
+	background-color: #4aaaa5;
+	color: #ffffff;
+	width: 250px;
+	margin-left: 38px;
+	padding-top: 10px;
+	position: relative;
+	bottom: 602px;
+	left: 330px;
+	text-align: center;;
+
+}
+
+.image5
+{
+	margin-left: 7px;
+	width: 250px;
+	height: 170px;
+
+	position: relative;
+	bottom: 603px;
+}
+
+.image-footer5
+{
+	background-color: #4aaaa5;
+	color: #ffffff;
+	width: 250px;
+	margin-left: 7px;
+	padding-top: 10px;
+	position: relative;
+	bottom: 657px;
+	
+	text-align: center;;
+
+}
+
+
+/* HW2 Add 3 @media screen tags, each with one of these max-width s: 980px, 768px & 640px */
+/* NOTE: Look up Class6/media-unsolved.html */
+
+@media screen and (max-width: 980px)
+{
+
+	
+	body
+	{
+		
+		overflow: auto;
+		background-color: #eff0f2;
+
+		
+		
+	}
+	
+	/* index/About me*/									/* the reason for 3 sepreate wrappers is because the sizinng in portfilio is different than (about-me page) */
+	.wrapper
+	{
+	    
+		width: 100%;
+		
+		padding: 80px;
+
+
+
+
+		position: relative;
+		right: 560px;
+		bottom: 90px;
+
+
+		
+	}
+
+	/* Contact */
+	.wrapper2
+	{
+	    
+		width: 100%;
+		
+		padding: 80px;
+
+
+
+		position: relative;
+		right: 560px;
+		bottom: 90px;
+
+
+		
+	}
+
+	/* Portfolio */
+	.wrapper3
+	{
+	    
+		width: 100%;
+		
+		padding: 80px;
+
+		height: 1%; 
+
+
+
+		position: relative;
+		right: 560px;
+		bottom: 90px;
+
+
+		
+	}
+
+	/* affects all 3 html pages (index, contact, portfolio) */
+	.header, .main-content-container			
+	{
+		
+		
+
+		width: 100%;
+		/*height: 50%;*/
+		
+		
+		
+	}
+
+	.main-content-container
+	{
+		
+		
+		
+	}
+
+	.header
+	{
+		height: 115px;
+	}
+
+	.name											/* TJ Stephens in green header */
+	{
+		
+		position: relative;
+		bottom: 8px;
+	}
+
+
+	/* Only affects (Portfolio.html) */
+	.main-content-container.portfolio2				/* double class selector so we only affect only the (.main-content-container) in (Portfilio.html) */
+	{
+		
+		
+		
+		 height: 1%;
+		
+
+
+		
+		
+		
+	}
+
+	
+	.footer
+	{
+		width: 100%;
+		
+
+
+		position: relative;
+
+		
+		top: 180px;									/* Prvents white space below footer by moving footer below */
+		
+
+	}
+
+
+
+
+    
+   
+	/* index/About Me */
+    .main-content
+    {
+
+    	width: 50%;										/* NOTE!!!: TRY width: 50% instead of using width: 610px; because when we use percentage(%) it causes all the words inside the 
+    													            main-container_1, main-container_2, main-container_3 to adjust or move inside just like (media-unsolved.html).    */
+		
+    }
+
+	/* Contact */
+    .main-content_2
+    {
+
+
+		width: 50%;
+    }
+
+	/* Portfolio */
+    .main-content_3
+    {
+    	width: 50%;
+    	height: 1%;										 /* Or you could do:  padding-bottom: 45%; */
+    	
+    }
+	
+
+    input                                                /* We need input with 50% so the textfields can adjust themselves to appropriate size when making the screen smaller. Note <form> won't work */
+    {
+    	width: 94%;
+    }
+
+    textarea
+    {
+    	width: 94%;
+    }
+
+
+
+    .image1, .image2, .image3, .image4, .image5
+    {
+		width: 50%;
+		
+	
+		
+		
+		
+		
+   
+   
+		
+    }
+
+    .image-footer1, .image-footer2, .image-footer3, .image-footer4, .image-footer5
+    {
+
+		width: 50%;
+		
+		
+		
+		
+    }
+
+
+	
+    
+
+    .image2
+    {
+    	margin-left: 7px;
+		
+		
+		position: relative;
+		bottom: 50px;
+
+    }
+
+	
+	.image-footer2
+	{
+		margin-left: 7px;
+		position: relative;
+		bottom: 104px;
+		left: 0px;
+	
+									/* Note since left is currently being used in first version of (.image-footer2) we cannot use right. right and left never work simultaneiously */
+		
+    
+	}
+
+	.image3
+	{
+		position: relative;
+		bottom: 92px;
+	}
+
+	.image-footer3
+	{
+		position: relative;
+		bottom: 145px;
+	}
+
+	.image4
+	{
+		margin-left: 7px;
+		position: relative;
+		bottom: 130px;
+	}
+
+	.image-footer4
+	{
+		margin-left: 7px;
+
+		position: relative;
+		left: 0px;								/* since prev version left: 330px; , left:0; cancels it out in order for margin-left: 7; to function properly */
+		bottom: 184px;
+		
+	}
+
+	.image5
+	{
+		position: relative;
+		bottom: 171px;
+	}
+	
+	.image-footer5
+	{
+		position: relative;
+		bottom: 225px;
+	}
+    
+
+
+    .connect
+    {
+		
+    	width: 30%; 
+		position: relative;
+		right: 147px;
+    	 
+    }
+
+    .connect.portfolio3
+    {
+    	position: relative;
+    	bottom: 1305px;
+    }	
+
+	
+}
+
+
+
+@media screen and (max-width: 768px)
+{
+	
+	
+	/* About-Me */
+	.main-content
+	{
+		height: 75%;
+		width: 97%;
+	}
+
+	/* Contact */
+	.main-content_2
+	{
+		height: 75%;
+		width: 97%;
+	}
+
+	/* Contact */
+	.main-content_3
+	{
+		width: 97%;
+		height: 685px;
+
+		/*
+		overflow: hidden;
+		background-color: #ffffff;
+		font-size: 18px;
+		width: 650px;
+		height: 685px;
+		margin-left: 10px;	*/				/* moves white main-content box to the right due to spacing on the left */
+		/*margin-top: 30px;		*/			/* moves white main-conent down due to spacing above */
+		/*
+		padding-bottom: 0px;
+	
+    
+
+  		border-style: solid;							
+		border-width: 1px; 
+		border-color: #cccccc;	
+		*/
+	}
+
+	.A_P_C
+	{
+		position: relative;
+		left: 170px;						/* move (About| Portfolio | Contact) closer to left in order to see it better */
+	}
+
+	.image1
+	{
+	
+		margin-left: 7px;
+		width: 250px;
+		height: 170px;
+		position: relative;
+		bottom: 10px;
+
+	} 
+
+	.image-footer1
+	{
+		background-color: #4aaaa5;
+		width: 250px;
+		margin-left: 7px;
+		padding-top: 10px;
+		position: relative;
+		bottom: 63px;
+		text-align: center;
+
+	}
+
+	.footer_p
+	{
+		color: white;
+
+		position: relative;
+		bottom: 10px;
+	}
+
+	.image2
+	{
+		margin-left: 368px;
+		width: 250px;
+		height: 170px;
+
+		position: relative;
+		bottom: 252px;
+	}
+
+	.image-footer2
+	{
+		background-color: #4aaaa5;
+		color: #ffffff;
+		width: 250px;
+		margin-left: 38px;
+		padding-top: 10px;
+		position: relative;
+		bottom: 305px;
+		left: 330px;							/* NOTE: We can either use right or left not both at the same time */
+		text-align: center;
+
+	}
+
+	.image3
+	{
+		margin-left: 7px;
+		width: 250px;
+		height: 170px;
+
+		position: relative;
+		bottom: 306px;
+	}
+
+	.image-footer3
+	{
+		background-color: #4aaaa5;
+		color: #ffffff;
+		width: 250px;
+		margin-left: 7px;
+		padding-top: 10px;
+		position: relative;
+		bottom: 360px;
+		text-align: center;
+
+	}
+
+	.image4
+	{
+		margin-left: 368px;
+		width: 250px;
+		height: 170px;
+
+		position: relative;
+		bottom: 548px;
+	}
+
+	.image-footer4
+	{
+		background-color: #4aaaa5;
+		color: #ffffff;
+		width: 250px;
+		margin-left: 38px;
+		padding-top: 10px;
+		position: relative;
+		bottom: 602px;
+		left: 330px;
+		text-align: center;;
+
+	}
+
+	.image5
+	{
+		margin-left: 7px;
+		width: 250px;
+		height: 170px;
+
+		position: relative;
+		bottom: 603px;
+	}
+
+	.image-footer5
+	{
+		background-color: #4aaaa5;
+		color: #ffffff;
+		width: 250px;
+		margin-left: 7px;
+		padding-top: 10px;
+		position: relative;
+		bottom: 657px;
+	
+		text-align: center;;
+
+	}
+
+
+
+	input
+	{
+		width: 94%;
+		position: relative;
+		bottom: 10px;
+		right: 15px;
+	}
+
+
+	textarea
+	{
+		width: 94%;
+		height: 102px;
+		position: relative;
+		bottom: 10px;
+		right: 15px;
+	}
+
+	form p
+	{
+		position: relative;
+		bottom: 10px;
+		right: 15px;
+	}
+
+	.button
+	{
+		text-align: center;
+		position: relative;
+		bottom: 22px;
+		right: 15px;
+	}
+
+	.button p
+	{
+		position: relative;
+		left: 0px;
+	}
+	
+
+	.connect
+	{
+
+		/*display: none;*/
+
+		text-align: left;
+		width: 97%; 
+		height: 15%;
+		
+		margin-top: 5%;
+		margin-left: 21.5%; 
+		position: relative;
+		bottom: 0px;
+		right: 142px;
+
+		
+		
+	}
+
+
+	.connect h2
+	{
+		margin-left: 3%;
+	}
+
+
+	.connect:after								/* Psuedo Element: work around for changing the border width for (connect) container  */
+	{
+	
+		/*content: ""; */
+		/*display: block;*/
+		/*padding-top: 0px;*/
+		/*border-bottom: 2px solid #eff0f2;*/
+		width: 93%;
+		
+		
+		position: relative;
+		left: 3%;	
+
+	}
+
+	.connect.portfolio3
+	{
+	
+		
+		padding-right: 0px;
+		padding: 0px;
+
+		position: relative;
+		top: 1px;
+		right: 142px;
+
+		
+
+
+	}
+
+
+
+
+	
+
+}
+
+
+
+@media screen and (max-width: 640px)
+{
+	.header
+	{
+		overflow: hidden;		/* allows us to properly position (about portfolio contact) */
+		position: static;
+		width: 520px;
+		height: 100%;			/*causes About Portfolio Contact to  move down */
+		position: relative;
+		right: 18px;
+
+			
+	 	text-align: center;	
+	}
+
+
+	
+	.wrapper
+	{
+		margin-right: 2%;
+
+	}
+
+	.wrapper2
+	{
+		margin-right: 2%;
+	}
+
+	.wrapper3
+	{
+		margin-right: 2%;
+	}
+
+	
+	.main-content-container
+	{
+		height: 100%;
+
+		border: none;
+	}
+
+
+	/* About-Me */
+	.main-content
+	{
+		height: 100%;
+		width: 80%;
+		margin-left: 60px;
+
+
+	}
+
+	.bio-image
+	{
+		width: 385px;
+		height: 380px;
+		margin-left: 0;
+		margin-right: 0;
+		
+		position: relative;
+		right: 3px;
+
+
+	}
+
+	.connect
+	{
+	
+		
+	}
+
+	/* Contact */
+	.main-content_2
+	{
+		height: 100%;
+		width: 80%;
+		margin-left: 60px;
+	}
+
+	/* Contact */
+	.main-content_3
+	{
+		height: 100%;				/*685px*/
+		width: 80%;
+		margin-left: 60px; 
+									/*position: relative;*/
+									/*left: 67px; for sidebar appear*/
+	}
+
+	.name
+	{
+		
+		width: 100%;
+		/*height: 80%; */
+		
+
+	}
+
+	.A_P_C	
+	{
+		
+		
+		width: 14%;	
+		position: relative;
+		top: 0px;
+		left: 30px;
+
+    }
+
+    .connect
+    {
+    	/*
+    	height: 5%;
+    	width: 408px;
+
+    	position: relative;
+    	right: 50px;
+    	*/
+		width: 396px;
+    	padding-right: 0px;
+		padding: 0px;
+
+		position: relative;
+		top: 1px;
+		right: 47px;
+
+    }
+
+	.connect.portfolio3				/* Taking previous custom (connect)'s position into account so we have to change the specific one as well */
+	{
+		position: relative;
+		top: 1px;
+		right: 47px;
+	}
+   
+
+	.image1
+	{
+	
+		margin-left: 7px;
+		width: 250px;
+		height: 170px;
+		position: relative;
+		bottom: 10px;
+
+	} 
+
+
+
+	.image2
+	{
+		margin-left: 7px;
+		width: 250px;
+		height: 170px;
+
+		position: relative;
+		bottom: 0;
+		top: 497px;
+	}
+
+	.image-footer2
+	{
+		background-color: #4aaaa5;
+		color: #ffffff;
+		width: 250px;
+		margin-left: 7px;
+		padding-top: 10px;
+		position: relative;
+		bottom: 0;
+		top: 444px;
+		left: 0;							/* NOTE: We can either use right or left not both at the same time */
+		text-align: center;
+
+	}
+
+
+
+	.image4
+	{
+		margin-left: 7px;
+		width: 250px;
+		height: 170px;
+
+		position: relative;
+		bottom: 174px;
+	}
+
+	.image-footer4
+	{
+		background-color: #4aaaa5;
+		color: #ffffff;
+		width: 250px;
+		margin-left: 7px;
+		padding-top: 10px;
+		position: relative;
+		bottom: 228px;
+		left: 0;
+		text-align: center;;
+
+	}
+
+
+	
+
+}
+
