@@ -24,7 +24,7 @@ We are using Bootstrap 3 to ensure that all elements fit on the screen whenever 
 # Porfolio
 ![portfolio](https://github.com/tdsteph1/Responsive-Portfolio/blob/master/assets/images/img2.png)
 
-# Minimizing Porfoliopage to see benifite of bootstrap
+# Minimizing Portfolio page to see benifite of bootstrap
 ![portfolio](https://github.com/tdsteph1/Responsive-Portfolio/blob/master/assets/images/img3.png)
 
 # Contact
